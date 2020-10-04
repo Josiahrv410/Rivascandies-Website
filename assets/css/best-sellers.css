@@ -1,0 +1,528 @@
+html,
+body {
+  font-family: "avenir Next Condensed", "Lato", Arial, Helvetica, sans-serif;
+  background: #f7ffff;
+  overflow: hidden;
+  width: 100vw;
+  overflow-y: scroll;
+}
+
+* {
+  box-sizing: border-box;
+  text-decoration: none !important;
+  list-style: none !important;
+}
+
+ul {
+  padding: 0;
+}
+
+/* ------------------------------------------------------------------ 
+------------------------------- HEADER ------------------------------
+------------------------------------------------------------------ */
+
+header {
+  -webkit-box-shadow: 0px 5px 18px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 5px 18px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 5px 18px 0px rgba(0, 0, 0, 0.75);
+  background: #e94040;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+  width: 100%;
+  height: 80px;
+  padding: 0 6%;
+}
+
+/* ---------------------------LOGO--------------------------------*/
+
+header .logo a {
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: pink;
+}
+
+header .logo a:hover {
+  color: purple;
+}
+
+/* ---------------------------MENU--------------------------------*/
+
+header .menu {
+  display: flex;
+}
+
+header .menu.mobile-mode .link {
+  display: none;
+}
+
+header .menu .open-mobile-menu {
+  display: none;
+}
+
+header .menu.mobile-mode .open-mobile-menu {
+  display: block;
+  color: #66a0ca;
+}
+
+header .menu.mobile-mode .open-mobile-menu {
+  display: block;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+header .menu.mobile-mode .open-mobile-menu a i {
+  color: pink;
+}
+
+header .link {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding-right: 8px;
+}
+
+header .dropdown {
+  position: relative;
+  padding-right: 15px;
+  font-size: 1.4rem;
+}
+header .link.dropdown a {
+  color: pink;
+  font-weight: 200;
+  font-size: 2rem;
+}
+header .link.dropdown a:hover {
+  color: purple;
+}
+header .dropdown:nth-child(3) {
+  padding-right: 0px;
+}
+
+header .dropdown .sub-menu {
+  position: absolute;
+  border-radius: 3px;
+  background: pink;
+  width: 120%;
+  margin-bottom: 5px;
+}
+
+header .dropdown:nth-child(2) .sub-menu {
+  background: pink;
+  width: 80%;
+}
+
+header .dropdown:nth-child(3) .sub-menu {
+  background: pink;
+  width: 120%;
+}
+
+header .dropdown .sub-menu a {
+  color: purple;
+  display: block;
+  border-bottom: 2px solid #ab029e;
+  font-size: 1.1rem;
+  padding: 0 5% 4px;
+  transition: all 0.3s ease-in-out;
+}
+header .dropdown .sub-menu a:hover {
+  background: purple;
+  color: pink;
+}
+
+header .dropdown .sub-menu a:last-child {
+  border-bottom: none;
+}
+
+header .menu .dropdown .sub-menu {
+  display: none;
+}
+
+header .menu .open-mobile-menu {
+  display: none;
+}
+
+header .menu .dropdown:hover .sub-menu,
+header .menu .dropdown .sub-menu:hover {
+  display: block;
+}
+
+/* ------------------------------------------------------------------ 
+------------------------- BEST-SELLERS --------------------------
+------------------------------------------------------------------ */
+
+#best-sellers {
+  background: #73f0e6;
+  width: 100%;
+  padding-top: 40px;
+  margin-top: 30px;
+}
+
+#best-sellers h2 {
+  text-align: center;
+  padding: 25px 0;
+  font-weight: 800;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+#best-sellers .row {
+  margin: 0 15%;
+}
+
+#best-sellers .row div[class*="col"] {
+  margin-bottom: 25px;
+}
+
+#best-sellers .product-bg {
+  -webkit-box-shadow: 0px 5px 18px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 5px 18px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.75);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  height: 100%;
+  min-height: 300px;
+}
+
+#best-sellers .product-bg .product-img {
+  width: 80%;
+}
+
+#best-sellers .product-bg .overlay {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background: #9a6ca2b8;
+  color: #045294;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+#best-sellers .product-bg .overlay:hover {
+  opacity: 1;
+}
+
+#best-sellers .product-bg .product-title {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+#best-sellers .product-bg .product-price {
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+#best-sellers .button {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+#best-sellers .button .see-more {
+  -webkit-box-shadow: 0px 5px 18px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 5px 18px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.75);
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: #56bcc9;
+  color: #160101;
+  border-radius: 150px;
+  padding: 15px 90px;
+  margin-top: 25px;
+  margin-bottom: 55px;
+}
+
+#best-sellers .button .see-more:hover {
+  background: #e94040;
+  color: #79ea6e;
+}
+
+/* ------------------------------------------------------------------ 
+----------------------------- FOOTER --------------------------------
+------------------------------------------------------------------ */
+
+footer {
+  background: #e94040;
+  width: 100%;
+}
+
+footer a {
+  color: black;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+
+footer a:hover {
+  color: #79ea6e;
+}
+
+footer .row .form {
+  color: pink;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+footer .row .form h4 {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+footer .row .form form {
+  margin-bottom: 15px;
+  padding-left: 3px;
+}
+
+footer .row .form form button {
+  border: none;
+  margin-left: 10px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-weight: 600;
+  background: pink;
+  padding: 6px 18px;
+}
+
+footer .row .form h6 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+footer .row .sitemap {
+  padding-top: 20px;
+}
+
+footer .row .sitemap .col-lg-4 {
+  padding: 0;
+}
+
+footer .menu-title,
+footer .social-title {
+  color: pink;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+footer .social-icons {
+  display: flex;
+  align-items: center;
+}
+
+footer .social-icons i {
+  border-radius: 50%;
+  background: #c350bf;
+  font-size: 1.3rem;
+  color: #73f0e6;
+  padding: 13px;
+  margin-top: 5px;
+  margin-right: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+footer .social-icons i:hover {
+  background: #73f0e6;
+  color: #c350bf;
+}
+
+footer .container .store-info {
+  margin: 20px 0 0 0;
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+footer .credits {
+  font-size: 0.8rem;
+  padding: 0 3%;
+  justify-content: space-between;
+  color: black;
+}
+
+footer .last-column {
+  width: 0px;
+  flex: 0;
+  padding: 0;
+  margin: 0;
+}
+
+/* ------------------------------------------------------------------ 
+------------------------ MOBILE-MENU --------------------------------
+------------------------------------------------------------------ */
+
+#mobile-menu {
+  background: #e94040;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  padding: 20px;
+  display: none;
+  transform: translate3d(-100%, 0, 0);
+}
+
+#mobile-menu.active {
+  display: block;
+}
+
+#mobile-menu .logo {
+  text-align: center;
+}
+
+#mobile-menu .logo a {
+  font-size: 3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #f4bfca;
+}
+
+.close-mobile-menu {
+  height: 50px;
+  width: 50px;
+  font-size: 1.5rem;
+  text-align: end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+}
+
+#mobile-menu .menu > li {
+  margin-bottom: 1rem;
+}
+
+#mobile-menu .menu > li > a {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  display: block;
+  color: #fec6ff;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #fec6ff;
+  margin-bottom: 1rem;
+}
+
+#mobile-menu .menu .link .sub-menu {
+  display: flex;
+  justify-content: center;
+}
+
+#mobile-menu .menu > li.dropdown .sub-menu a {
+  display: inline-block;
+  color: #ffa6a6;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 10px 7px;
+}
+#mobile-menu .menu > li.dropdown .sub-menu a:hover {
+  color: #f4bfca;
+}
+
+.close-mobile-menu i {
+  padding: 10px;
+  color: #f4bfca;
+}
+
+/* ------------------------------------------------------------------ 
+  ------------------------ MEDIA QUIERIES -----------------------------
+  ------------------------------------------------------------------ */
+
+/* TABLETS */
+@media (min-width: 768px) and (max-width: 991px) {
+  #best-sellers .button .see-more {
+    font-size: 1rem;
+    background: #56bcc9;
+    color: #160101;
+    font-weight: 600;
+    padding: 15px 90px;
+    border-radius: 150px;
+    margin-bottom: 45px;
+  }
+
+  footer .sitemap .social-menu {
+    margin-bottom: 20px;
+  }
+  footer .row .form {
+    color: pink;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0 0 0;
+  }
+}
+
+/* LARGE PHONES */
+@media (min-width: 576px) and (max-width: 767px) {
+  #best-sellers .button .see-more {
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 600;
+    background: #56bcc9;
+    color: #160101;
+    border-radius: 150px;
+    padding: 14px 10%;
+    margin-bottom: 55px;
+  }
+
+  footer .row .form {
+    color: pink;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0 0 0;
+  }
+  footer .sitemap .social-menu {
+    margin-bottom: 20px;
+  }
+}
+
+/* SMALL PHONES */
+@media (min-width: 1px) and (max-width: 575px) {
+  #best-sellers .button .see-more {
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 600;
+    background: #56bcc9;
+    color: #160101;
+    border-radius: 150px;
+    padding: 14px 15%;
+    margin-bottom: 55px;
+  }
+
+  footer .row .form {
+    color: pink;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0 0 0;
+  }
+  footer .sitemap .social-menu {
+    margin-bottom: 20px;
+  }
+}
